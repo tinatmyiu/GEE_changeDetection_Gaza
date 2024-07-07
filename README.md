@@ -7,6 +7,7 @@ Figure 1. The map of Gaza Strip.
 
 
 ## Methodology
-Dynamic World is a global land use land cover dataset with near realtime 10m resolution. It produces probabilities per pixel for 9 land types, including built area. Built area 
+Dynamic World is a global land use land cover dataset with near realtime 10m resolution. It produces probabilities per pixel for 9 land types, including built area. Built area is defined as low- and high-density buildings, roads, and urban open space. There is a chance that other than bulidings, the change of roads and urban open space is also detected using this method.
+
 The change of built
 https://code.earthengine.google.com/6e622c0a2454404094a83302d5530081
