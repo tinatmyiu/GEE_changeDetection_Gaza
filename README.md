@@ -128,14 +128,24 @@ Figure 8. Harmonised S2 RGB image of Rafah before the war
 Figure 9. Harmonised S2 RGB image of Rafah after 7 Oct 2023
 
 
-![Alt text](KhanYounis/KhanYounis_area.PNG)
-
 ![paste to excel](KhanYounis/KhanYounis_area.PNG)
-Figure 7. Decreased built area in Khan Younis
+Figure 10. Decreased built area in Khan Younis
 
 ![paste to excel](KhanYounis/KhanYounis_after_s2.PNG)
-Figure 8. Harmonised S2 RGB image of Khan Younis before the war
+Figure 11. Harmonised S2 RGB image of Khan Younis before the war
 
-![paste to excel](KhanYounis/KhanYounis_before.PNG)
-Figure 9. Harmonised S2 RGB image of Khan Younis after 7 Oct 2023
+![paste to excel](KhanYounis/KhanYounis_before_s2.PNG)
+Figure 12. Harmonised S2 RGB image of Khan Younis after 7 Oct 2023
+
+
+
+![paste to excel](gaza/gaza_area.PNG)
+Figure 13. Decreased built area in Gaza City
+
+![paste to excel](gaza/gaza_after_s2.PNG)
+Figure 14. Harmonised S2 RGB image of Gaza City before the war
+
+![paste to excel](gaza/gaza_before_s2.PNG)
+Figure 15. Harmonised S2 RGB image of Gaza City after 7 Oct 2023
+
 
