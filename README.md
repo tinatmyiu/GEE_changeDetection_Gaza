@@ -76,7 +76,7 @@ Map.addLayer(new_built, changeVisParams, 'Decreased built area')
 ```
 
 
-As shown in Figure 2 and 3, the built area (red) decreased and the area of bare ground (grey) increased. Before the war, the built area continuously covered the land in Gaza Strip. However, the built area scattered and was separated by bare ground. There was a significant decrease in built area around the Gaza-Egypt boarder, in Rafah (Figure 5). The decreased built area was also notably centred in Khan Younis (Figure 4).
+As shown in Figure 2 and 3, the built area (red) decreased and the area of bare ground (grey) increased. Before the war, the built area continuously covered the land in Gaza Strip. However, the built area scattered and was separated by bare ground. There was a significant decrease in built area around the Gaza-Egypt boarder, in Rafah. The decreased built area was also notably centred in Khan Younis. In Gaza City, the built area around the coastline and the boarder between Gaza City and Deir al Balah was decreased. (Figure 4)
 
 ![paste to excel](lulcBefore.PNG)    
 Figure 2. LULC before the war in Gaza Strip
@@ -87,4 +87,22 @@ Figure 3. LULC after the start of the war in Gaza Strip
 
 ![paste to excel](area.PNG)
 Figure 4. Decreased built area in Gaza Strip.
+
+
+## Crosschecking with Harmonised Sentinel-2 RGB imagery
+
+```javascript
+//obtain Harmonized Sentinel-2 MSI: MultiSpectral Instrument, Level-1C before and after Israel–Hamas war in Gaza strip
+//set bands to'B4', 'B3', 'B2' for RGB image
+var s2 = ee.ImageCollection('COPERNICUS/S2_HARMONIZED')
+             .filterBounds(geometry)
+             .filter(ee.Filter.lt('CLOUDY_PIXEL_PERCENTAGE', 35));
+
+var beforeS2 = s2.filterDate(beforeStart, beforeEnd).median().clip(geometry);
+var afterS2 = s2.filterDate(afterStart, afterEnd).median().clip(geometry);
+
+var s2VisParams = {bands: ['B4', 'B3', 'B2'], min: 0, max: 3000};
+Map.addLayer(beforeS2.clip(geometry), s2VisParams, 'Before S2');
+Map.addLayer(afterS2.clip(geometry), s2VisParams, 'After S2');
+```
 
