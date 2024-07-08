@@ -19,6 +19,72 @@ A map of damage assessment from UNOSAT and a map of fortified position from Plan
 
 
 ## Decreased built area in Gaza Strip
-As shown in Figure 2 and 3, the built area (red) decreased and the area of bare ground (grey) increased. Before the war, the built area continuously covered the land in Gaza Strip. However, the built area scattered and was separated by bare ground. 
 
-![paste to excel](mapGaza.PNG)
+```javascript
+//set the startDate as 2023-10-07 which is the 1st day of Israel–Hamas war and endDate as 2024-06-07 which is 8 months after the start 
+var startDate = '2023-10-07';
+var endDate = '2024-06-07';
+
+//obtain the geometry of Gaza Strip
+var admin2 = ee.FeatureCollection("FAO/GAUL_SIMPLIFIED_500m/2015/level2");
+var geometry = admin2.filter(ee.Filter.eq('ADM0_NAME', 'Gaza Strip'));
+
+//let the Gaza Strip be the centre of the view
+Map.centerObject(geometry,10)
+
+//set before date and start date with a period of 1 month
+var beforeYear = 2023;
+var afterYear = 2024;
+
+var beforeStart = ee.Date.fromYMD(beforeYear, 10, 7);
+var beforeEnd = beforeStart.advance(1, 'month');
+
+var afterStart = ee.Date.fromYMD(afterYear, 6, 7);
+var afterEnd = afterStart.advance(1, 'month');
+//obtain Dynamic World before and after Israel–Hamas war in Gaza strip
+var dw = ee.ImageCollection('GOOGLE/DYNAMICWORLD/V1')
+             .filterBounds(geometry)
+
+var beforeDw = dw.filterDate(beforeStart, beforeEnd).mean().clip(geometry);
+var afterDw = dw.filterDate(afterStart, afterEnd).mean().clip(geometry);
+
+var built_before = beforeDw.select('built');
+var built_after = afterDw.select('built');
+
+var changeVisParams = {min: 0, max: 1, palette: ['white', '00008B']};
+
+//if the probability of built after is less than 0.25, built befre is greater than 0.5
+//obtain decreased bulit area
+var new_built = built_after.lt(0.25).and(built_before.gt(0.5));
+var new_built = new_built.updateMask(new_built);
+
+// assign different attributes in label with different colors
+var dwVisParams = {
+  min: 0,
+  max: 8,
+  palette: ['#419BDF', '#397D49', '#88B053', '#7A87C6',
+    '#E49635', '#DFC35A', '#C4281B', '#A59B8F', '#B39FE1']
+};
+
+var class_before = beforeDw.select('label').clip(geometry);
+var class_after = afterDw.select('label').clip(geometry);
+
+Map.addLayer(class_before,dwVisParams, 'LULC_before');
+Map.addLayer(class_after,dwVisParams, 'LULC_after');
+Map.addLayer(new_built, changeVisParams, 'Decreased built area')
+
+```
+
+
+As shown in Figure 2 and 3, the built area (red) decreased and the area of bare ground (grey) increased. Before the war, the built area continuously covered the land in Gaza Strip. However, the built area scattered and was separated by bare ground. There was a significant decrease in built area around the Gaza-Egypt boarder, in Rafah (Figure 5). The decreased built area was also notably centred in Khan Younis (Figure 4).
+
+![paste to excel](lulcBefore.PNG)    
+Figure 2. LULC before the war in Gaza Strip
+
+
+![paste to excel](lulcAfter.PNG)
+Figure 3. LULC after the start of the war in Gaza Strip
+
+![paste to excel](area.PNG)
+Figure 4. Decreased built area in Gaza Strip.
+
