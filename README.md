@@ -115,7 +115,7 @@ Figure 5. Harmonised S2 RGB image of Gaza Strip before the war
 Figure 6. Harmonised S2 RGB image of Gaza Strip after 7 Oct 2023
 
 
-The decreased bulit area DW imagery of Gaza-Egypt boarder, in Rafah, Khan Younis, and Gaza City showed matching results in comparison with the harmonised S2 RGB imagery.
+The decreased bulit area DW imagery of Gaza-Egypt boarder, in Rafah, Khan Younis, and Gaza City showed matching results in comparison with the harmonised S2 RGB imagery. The marked decreased buit area aligned the harmonised S2 RGB imagery with demolished built area. However, in the centre of Gaza City, some demolished built area was not marked as decreased built area, when the area showed demolishment in the harmonised S2 RGB imagery, after 7 Oct 2023. 
 
 
 ![paste to excel](rafah/rafah_area.PNG)
@@ -148,4 +148,5 @@ Figure 14. Harmonised S2 RGB image of Gaza City before the war
 ![paste to excel](gaza/gaza_before_s2.PNG)
 Figure 15. Harmonised S2 RGB image of Gaza City after 7 Oct 2023
 
-
+## Change detection in Gaza Strip with Dynamic World
+The matching results between the decreased built area in DW and Harmonised S2 RGB image supported the method of using Dynamic World to detect demolished built area. However, it might have a protential oversight of decreased built area with demolishment so crosschecking with real visible imagery is still highly recommended for validation.
