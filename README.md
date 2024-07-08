@@ -1,6 +1,6 @@
-# Change detection of demolished built area in Gaza Strip after 2023 
+# Change detection of demolished built area in Gaza Strip after 2023 Israel–Hamas war
 ## Introduction
-Since 7 October. 2023, Israel and Hamas-led Palestinian militant groups have been continously having an armed conflict especially in Gaza Strip. Israel–Hamas war. The United Nations Economic and Social Commission for Western Asia (ESCWA) updated on May 2024 that 360,000 buildings in the Gaza Strip have been partially damaged or destroyed during Israel’s war against Hamas. Based on the data dated April 28, 2024 from Palestinian Central Bureau of Statistics , over 50% of the buildings were destroyed.Here presents a change detection of demolished built area in Gaza Strip, using Google Earth Engine (GEE). The data from Dynamic World allows detection of built area. A decrese of built area implies the demolishment. By crosschecking with the RGB satallite images, it is to confirm that this method of change detection can be used as demage assessment of demolished buildings.
+Since 7 October. 2023, Israel and Hamas-led Palestinian militant groups have been continously having an armed conflict especially in Gaza Strip, during Israel–Hamas war. The United Nations Economic and Social Commission for Western Asia (ESCWA) updated on May 2024 that 360,000 buildings in the Gaza Strip have been partially damaged or destroyed during Israel’s war against Hamas. Based on the data dated April 28, 2024 from Palestinian Central Bureau of Statistics , over 50% of the buildings were destroyed.Here presents a change detection of demolished built area in Gaza Strip, using Google Earth Engine (GEE). The data from Dynamic World allows detection of built area. A decrese of built area implies the demolishment. By crosschecking with the RGB satallite images, it is to confirm that this method of change detection can be used as demage assessment of demolished buildings.
 
 ![paste to excel](mapGaza.PNG)
 Figure 1. The map of Gaza Strip (outlined with black line).
@@ -128,12 +128,14 @@ Figure 8. Harmonised S2 RGB image of Rafah before the war
 Figure 9. Harmonised S2 RGB image of Rafah after 7 Oct 2023
 
 
-![paste to excel](Khan Younis/KhanYounis_area.PNG)
+![Alt text](KhanYounis/KhanYounis_area.PNG)
+
+![paste to excel](KhanYounis/KhanYounis_area.PNG)
 Figure 7. Decreased built area in Khan Younis
 
-![paste to excel](Khan Younis/KhanYounis_after_s2.PNG)
+![paste to excel](KhanYounis/KhanYounis_after_s2.PNG)
 Figure 8. Harmonised S2 RGB image of Khan Younis before the war
 
-![paste to excel](Khan Younis/KhanYounis_before_s2.PNG)
+![paste to excel](KhanYounis/KhanYounis_before.PNG)
 Figure 9. Harmonised S2 RGB image of Khan Younis after 7 Oct 2023
 
