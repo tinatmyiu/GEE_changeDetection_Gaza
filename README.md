@@ -15,8 +15,6 @@ Harmonised Sentinel-2 MSI: MultiSpectral Instrument, Level-1C (S2)is an imaging 
 The full javascript code of this change detection task in GEE can be accessed in the following link:
 https://code.earthengine.google.com/6e622c0a2454404094a83302d5530081
 
-A map of damage assessment from UNOSAT and a map of fortified position from Planet Lab are for checking the coherence of data between different data sources.
-
 
 ## Decreased built area in Gaza Strip
 
