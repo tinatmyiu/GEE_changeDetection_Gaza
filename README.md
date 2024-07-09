@@ -119,20 +119,20 @@ The decreased bulit area DW imagery of Gaza-Egypt boarder, in Rafah, Khan Younis
 ![paste to excel](rafah/rafah_area.PNG)
 Figure 7. Decreased built area in Rafah
 
-![paste to excel](rafah/rafah_after_s2.PNG)
+![paste to excel](rafah/rafah_before_s2.PNG)
 Figure 8. Harmonised S2 RGB image of Rafah before the war
 
-![paste to excel](rafah/rafah_before_s2.PNG)
+![paste to excel](rafah/rafah_after_s2.PNG)
 Figure 9. Harmonised S2 RGB image of Rafah after 7 Oct 2023
 
 
 ![paste to excel](KhanYounis/KhanYounis_area.PNG)
 Figure 10. Decreased built area in Khan Younis
 
-![paste to excel](KhanYounis/KhanYounis_after_s2.PNG)
+![paste to excel](KhanYounis/KhanYounis_before_s2.PNG)
 Figure 11. Harmonised S2 RGB image of Khan Younis before the war
 
-![paste to excel](KhanYounis/KhanYounis_before_s2.PNG)
+![paste to excel](KhanYounis/KhanYounis_after_s2.PNG)
 Figure 12. Harmonised S2 RGB image of Khan Younis after 7 Oct 2023
 
 
@@ -140,10 +140,10 @@ Figure 12. Harmonised S2 RGB image of Khan Younis after 7 Oct 2023
 ![paste to excel](gaza/gaza_area.PNG)
 Figure 13. Decreased built area in Gaza City
 
-![paste to excel](gaza/gaza_after_s2.PNG)
+![paste to excel](gaza/gaza_before_s2.PNG)
 Figure 14. Harmonised S2 RGB image of Gaza City before the war
 
-![paste to excel](gaza/gaza_before_s2.PNG)
+![paste to excel](gaza/gaza_after_s2.PNG)
 Figure 15. Harmonised S2 RGB image of Gaza City after 7 Oct 2023
 
 ## Change detection in Gaza Strip with Dynamic World
